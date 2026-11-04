@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  background-color: #ffffff;
+}
+
+.topbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 13px 2%;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  justify-self: start;
+  color: #202923;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.brand-logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.floating-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #e9e7df;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgb(32 41 35 / 10%);
+}
+
+.floating-nav a {
+  padding: 11px 18px;
+  border-radius: 30px;
+  color: #525b54;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.floating-nav a:hover,
+.floating-nav a[aria-current="page"] {
+  background: #e8efe8;
+  color: #246346;
+}
+
+.signin {
+  justify-self: end;
+  padding: 13px 22px;
+  border-radius: 30px;
+  background: #202923;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.signin:hover {
+  background: #246346;
+}
+
+.topbar a:focus-visible {
+  outline: 3px solid #a16b24;
+  outline-offset: 4px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  padding: 50px 7% 80px;
+  color: #202923;
+}
+
+.hero-label {
+  margin: 0 0 18px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  margin: 0 0 18px;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.hero-content > p:last-child {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.property-search {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 86%;
+  box-sizing: border-box;
+  margin: auto auto 55px;
+  padding: 10px 12px 10px 24px;
+  background: #fffefa;
+  border: 1px solid #e9e7df;
+  border-radius: 60px;
+  box-shadow: 0 12px 40px rgb(32 41 35 / 18%);
+}
+
+.search-tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.search-tabs a {
+  padding: 12px 0;
+  color: #525b54;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.search-tabs a:hover {
+  color: #246346;
+}
+
+.location-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 24px;
+  border-left: 1px solid #e2e4dc;
+  border-right: 1px solid #e2e4dc;
+}
+
+.location-field label {
+  color: #747b73;
+  font-size: 12px;
+}
+
+.location-field select {
+  width: 155px;
+  border: none;
+  background: transparent;
+  color: #202923;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.keyword-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.keyword-field svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #747b73;
+}
+
+.keyword-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  border: none;
+  background: transparent;
+  color: #202923;
+  font: inherit;
+  font-size: 14px;
+}
+
+.keyword-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50px;
+  background: transparent;
+  color: #202923;
+  font: inherit;
+  font-size: 14px;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 40px;
+  background: #202923;
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background: #246346;
+}
+
+.property-search :focus-visible {
+  outline: 3px solid #a16b24;
+  outline-offset: 4px;
+}

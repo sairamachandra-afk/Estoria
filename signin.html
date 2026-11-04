@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Estoria</title>
+    <link rel="icon" href="Logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <header class="signin-header">
+        <a href="index.html" class="brand">
+            <img src="Logo.png" alt="">
+            <span>Estoria</span>
+        </a>
+        <a href="index.html" class="back-link">Back to home</a>
+    </header>
+
+    <main class="signin-layout">
+        <section class="benefits">
+            <div class="benefits-content">
+                <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+                <h1>A better way<br>to find your home.</h1>
+                <p class="intro">One account. More possibilities for your next move.</p>
+
+                <ul>
+                    <li>Save the homes you love in one place</li>
+                    <li>Find properties that match your preferences</li>
+                    <li>Connect with owners and property agents</li>
+                    <li>List your property for sale or rent</li>
+                    <li>Manage your listings and enquiries</li>
+                </ul>
+
+                <p class="benefits-footer">Find your place. Make it yours.</p>
+            </div>
+        </section>
+
+        <section class="login-area" aria-labelledby="login-title">
+            <div class="login-card">
+                <p class="eyebrow">WELCOME TO ESTORIA</p>
+                <h2 id="login-title">Welcome back.</h2>
+                <p class="login-subtitle">Sign in to take the next step towards home.</p>
+
+                <form>
+                    <fieldset class="account-type">
+                        <legend>I am a</legend>
+
+                        <div class="role-options">
+                            <label>
+                                <input type="radio" name="role" value="buyer-owner" checked>
+                                <span>Buyer / Owner</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="role" value="agent-builder">
+                                <span>Agent / Builder</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <label for="mobile" class="field-label">Mobile number</label>
+
+                    <div class="phone-field">
+                        <span>+91</span>
+                        <input
+                            id="mobile"
+                            name="mobile"
+                            type="tel"
+                            inputmode="numeric"
+                            autocomplete="tel-national"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            placeholder="Enter your mobile number"
+                            required
+                        >
+                    </div>
+
+                    <p class="field-hint">Use a 10-digit Indian mobile number.</p>
+
+                    <button type="button" class="continue-button">Continue</button>
+
+                    <details class="help">
+                        <summary>Need help?</summary>
+                        <p>Enter your 10-digit mobile number without the country code.</p>
+                    </details>
+
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <button type="button" class="google-button">Google</button>
+                </form>
+
+                <div class="signup-row">
+                    New to Estoria?
+                <a href="signup.html">Sign up</a>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
