@@ -3,7 +3,7 @@
 
 Estoria is a real estate listing website built using **HTML and CSS**. It provides a clean, modern interface for exploring properties for sale and rent, viewing property details, and accessing account pages.
 
-Developed as a course project, Estoria focuses on frontend design, structured layouts, and CSS-based interactions.
+Developed as a part of CSE326 project(LPU), Estoria focuses on frontend design, structured layouts, and CSS-based interactions.
 
 ## Project Details
 
