@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoria</title>
+    <link rel="icon" href="Logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <section class="hero">
+        <header class="topbar">
+            <a href="index.html" class="brand">
+                <img src="Logo.png" alt="" class="brand-logo">
+                <span>Estoria</span>
+            </a>
+
+            <nav class="floating-nav" aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="Buy.html">Buy</a>
+                <a href="Rent.html">Rent</a>
+                <a href="Sell.html">Sell</a>
+                <a href="index.html#contact">Agents</a>
+            </nav>
+
+            <a href="signin.html" class="signin">Sign In</a>
+        </header>
+
+        <div class="hero-content">
+            <p class="hero-label">Discover your next chapter</p>
+            <h1>Find a place to call home.</h1>
+            <p>Explore homes that fit your lifestyle and your budget.</p>
+        </div>
+
+        <form class="property-search" action="Buy.html" method="get" aria-label="Property search">
+            <nav class="search-tabs" aria-label="Property options">
+                <a href="Buy.html">Buy</a>
+                <a href="Rent.html">Rent</a>
+                <a href="Sell.html">Sell</a>
+            </nav>
+
+            <div class="location-field">
+                <label for="location">Location</label>
+                <select id="location" name="location">
+                    <option value="">All locations</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="jalandhar">Jalandhar</option>
+                    <option value="phagwara">Phagwara</option>
+                    <option value="kochi">Kochi</option>
+                    <option value="trivandrum">Trivandrum</option>
+                </select>
+            </div>
+
+            <div class="keyword-field">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <circle cx="10.5" cy="10.5" r="6.5"/>
+                    <path d="m16 16 4 4"/>
+                </svg>
+                <input
+                    id="keywords"
+                    name="keywords"
+                    type="search"
+                    aria-label="Search by area, address or property name"
+                    placeholder="Area, address or property name"
+                >
+            </div>
+
+            <button class="search-button" type="submit">
+                Search Properties
+            </button>
+        </form>
+    </section>
+</body>
+</html>
