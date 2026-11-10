@@ -156,8 +156,7 @@ The interface includes AI-generated property imagery. Property names, prices, an
 | Member 1 | 12603390 |
 | Member 2 | 12601442 |
 
-**Team Name:Property coders** To be updated.
-
+**Team Name:Property coders**
 ---
 
 **Estoria — Find your place. Make it yours.**
