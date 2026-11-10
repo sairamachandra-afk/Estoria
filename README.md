@@ -9,7 +9,7 @@ Developed as a course project, Estoria focuses on frontend design, structured la
 
 | Project Name & Title | Team Name | Course Code | Registration Number(s) |
 | --- | --- | --- | --- |
-| **Estoria — Real Estate Listing Website** | To be updated | **K2P26AW** | 12603390, 12601442 |
+| **Estoria — Real Estate Listing Website** | **Property coders** | **K2P26AW** | 12603390, 12601442 |
 
 ## Live Website
 
