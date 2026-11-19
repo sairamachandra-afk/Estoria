@@ -9,7 +9,7 @@ Developed as a part of CSE326 project(LPU), Estoria focuses on frontend design, 
 
 | Project Name & Title | Team Name | Course Code | Registration Number(s) |
 | --- | --- | --- | --- |
-| **Estoria — Real Estate Listing Website** | **Property coders** | **K2P26AW** | 12603390, 12601442 |
+| **Estoria — Real Estate Listing Website** | **Property coders** | **K2P26AW** | 12603390 , 12601442 |
 
 ## Live Website
 
