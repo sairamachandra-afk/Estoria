@@ -12,171 +12,312 @@
 </head>
 <body>
     <header class="topbar">
-        <a href="index.html" class="brand"><img src="Logo.png" alt=""><span>Estoria</span></a>
+        <a href="index.html" class="brand">
+            <img src="Logo.png" alt="">
+            <span>Estoria</span>
+        </a>
+
         <nav class="floating-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="Buy.html" >Buy</a>
+            <a href="Buy.html">Buy</a>
             <a href="Rent.html" aria-current="page">Rent</a>
             <a href="Sell.html">Sell</a>
             <a href="index.html#contact">Agents</a>
         </nav>
+
         <a href="signin.html" class="signin">Sign In</a>
     </header>
-    <main>
+
+    <main class="page-content">
         <section class="page-intro">
-            <div><p class="eyebrow">FIND YOUR NEXT RENTAL</p><h1>A fresh start. A place of your own.</h1><p>Explore thoughtfully selected homes in Chandigarh and around.</p></div>
-            <div class="mode-switch"><a href="Buy.html" >Buy a home</a><a href="Rent.html" aria-current='page'>Rent a home</a></div>
+            <div>
+                <p class="eyebrow">CHANDIGARH &amp; SURROUNDING AREAS</p>
+                <h1>Homes for rent</h1>
+                <p>Find a comfortable place for your next chapter.</p>
+            </div>
+
+            <nav class="mode-switch" aria-label="Listing type">
+                <a href="Buy.html">Buy a home</a>
+                <a href="Rent.html" aria-current="page">Rent a home</a>
+            </nav>
         </section>
-        <div class="listing-layout">
-            <aside class="filters" aria-label="Property filters">
-                <div class="filter-heading"><h2>Refine your search</h2></div>
-                <form id="filters">
-                    <fieldset><legend>Property type</legend>
-                        <label><input type="checkbox" name="type" value="apartment"> Apartments <span>2</span></label>
-                        <label><input type="checkbox" name="type" value="villa"> Villas <span>1</span></label>
-                        <label><input type="checkbox" name="type" value="studio"> Studios <span>1</span></label>
+
+        <section class="properties" aria-label="Property listings">
+            <input class="hidden-input filter-input" type="radio" name="category" id="all" checked>
+            <input class="hidden-input filter-input" type="radio" name="category" id="apartments">
+            <input class="hidden-input filter-input" type="radio" name="category" id="villas">
+            <input class="hidden-input filter-input" type="radio" name="category" id="studios">
+
+            <div class="category-options">
+                <label for="all">All homes</label>
+                <label for="apartments">Apartments</label>
+                <label for="villas">Villas</label>
+                <label for="studios">Studios</label>
+            </div>
+
+            <div class="property-grid">
+                <article class="property-card apartment">
+                    <fieldset class="gallery">
+                        <legend class="visually-hidden">Photos of Maple Heights</legend>
+
+                        <input class="photo-1 hidden-input" type="radio" name="maple-photos" id="maple-1" aria-label="Maple Heights: photo 1 of 3" checked>
+                        <input class="photo-2 hidden-input" type="radio" name="maple-photos" id="maple-2" aria-label="Maple Heights: photo 2 of 3">
+                        <input class="photo-3 hidden-input" type="radio" name="maple-photos" id="maple-3" aria-label="Maple Heights: photo 3 of 3">
+
+                        <div class="slides">
+                            <div class="slide slide-1">
+                                <img src="images/maple-exterior.png" alt="Exterior of Maple Heights" width="1200" height="900">
+                                <span class="photo-caption">Exterior · 1 / 3</span>
+                                <label class="photo-arrow previous" for="maple-3" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="maple-2" aria-label="Next photo">›</label>
+                            </div>
+
+                            <div class="slide slide-2">
+                                <img src="images/maple-living.png" alt="Living space of Maple Heights" width="1200" height="900" loading="lazy">
+                                <span class="photo-caption">Living space · 2 / 3</span>
+                                <label class="photo-arrow previous" for="maple-1" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="maple-3" aria-label="Next photo">›</label>
+                            </div>
+
+                            <div class="slide slide-3">
+                                <img src="images/maple-bedroom.png" alt="Bedroom of Maple Heights" width="1200" height="900" loading="lazy">
+                                <span class="photo-caption">Bedroom · 3 / 3</span>
+                                <label class="photo-arrow previous" for="maple-2" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="maple-1" aria-label="Next photo">›</label>
+                            </div>
+                        </div>
+
+                        <div class="photo-dots">
+                            <label for="maple-1" class="dot-1" aria-label="Show photo 1"></label>
+                            <label for="maple-2" class="dot-2" aria-label="Show photo 2"></label>
+                            <label for="maple-3" class="dot-3" aria-label="Show photo 3"></label>
+                        </div>
                     </fieldset>
-                    <fieldset><legend>Budget</legend>
-                        <label><input type="radio" name="budget" value="all" checked> Any budget</label>
-                        <label><input type="radio" name="budget" value="lower"> Under ₹25,000 / month</label>
-                        <label><input type="radio" name="budget" value="upper"> ₹25,000 / month and above</label>
+
+                    <div class="card-body">
+                        <div class="card-heading">
+                            <span class="property-type">Apartment</span>
+                            <span class="availability">Available now</span>
+                        </div>
+
+                        <h2>Maple Heights</h2>
+                        <p class="location">Sector 67, Mohali</p>
+                        <p class="price">₹24,000 <span>/ month</span></p>
+
+                        <div class="features">
+                            <span>2 beds</span>
+                            <span>2 baths</span>
+                            <span>1,240 sq ft</span>
+                        </div>
+
+                        <details class="property-details">
+                            <summary>Property details</summary>
+                            <p>A bright two-bedroom apartment with a balcony, covered parking and a practical family layout.</p>
+                            <p>Balcony · Covered parking · Lift</p>
+                        </details>
+
+                        <a href="signin.html" class="contact-button">Sign in to enquire</a>
+                    </div>
+                </article>
+
+                <article class="property-card apartment">
+                    <fieldset class="gallery">
+                        <legend class="visually-hidden">Photos of The Olive Residence</legend>
+
+                        <input class="photo-1 hidden-input" type="radio" name="olive-photos" id="olive-1" aria-label="The Olive Residence: photo 1 of 3" checked>
+                        <input class="photo-2 hidden-input" type="radio" name="olive-photos" id="olive-2" aria-label="The Olive Residence: photo 2 of 3">
+                        <input class="photo-3 hidden-input" type="radio" name="olive-photos" id="olive-3" aria-label="The Olive Residence: photo 3 of 3">
+
+                        <div class="slides">
+                            <div class="slide slide-1">
+                                <img src="images/olive-exterior.png" alt="Exterior of The Olive Residence" width="1200" height="900">
+                                <span class="photo-caption">Exterior · 1 / 3</span>
+                                <label class="photo-arrow previous" for="olive-3" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="olive-2" aria-label="Next photo">›</label>
+                            </div>
+
+                            <div class="slide slide-2">
+                                <img src="images/olive-living.png" alt="Living space of The Olive Residence" width="1200" height="900" loading="lazy">
+                                <span class="photo-caption">Living space · 2 / 3</span>
+                                <label class="photo-arrow previous" for="olive-1" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="olive-3" aria-label="Next photo">›</label>
+                            </div>
+
+                            <div class="slide slide-3">
+                                <img src="images/olive-bedroom.png" alt="Bedroom of The Olive Residence" width="1200" height="900" loading="lazy">
+                                <span class="photo-caption">Bedroom · 3 / 3</span>
+                                <label class="photo-arrow previous" for="olive-2" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="olive-1" aria-label="Next photo">›</label>
+                            </div>
+                        </div>
+
+                        <div class="photo-dots">
+                            <label for="olive-1" class="dot-1" aria-label="Show photo 1"></label>
+                            <label for="olive-2" class="dot-2" aria-label="Show photo 2"></label>
+                            <label for="olive-3" class="dot-3" aria-label="Show photo 3"></label>
+                        </div>
                     </fieldset>
-                    <fieldset><legend>Bedrooms</legend><div class="bed-options">
-                        <label><input type="radio" name="beds" value="all" checked><span>Any</span></label>
-                        <label><input type="radio" name="beds" value="1"><span>1</span></label>
-                        <label><input type="radio" name="beds" value="2"><span>2</span></label>
-                        <label><input type="radio" name="beds" value="3"><span>3</span></label>
-                        <label><input type="radio" name="beds" value="4"><span>4+</span></label>
-                    </div></fieldset>
-                    <button type="reset" class="reset-button">Reset filters</button>
-                </form>
-                <div class="sidebar-note"><span>Let's find your place.</span><p>Compare homes, explore the details and save your favourites.</p></div>
-            </aside>
-            <section class="results" id="results" aria-labelledby="results-title">
-                <p class="breadcrumb"><a href="index.html">Home</a> / Rent / Chandigarh</p>
-                <div class="results-heading"><div><h2 id="results-title">Homes for rent</h2><p>Chandigarh &amp; surrounding areas</p></div><span class="collection-label">Selected homes</span></div>
-                <div class="property-grid">
-                    <article class="property-card" id="property-1" data-category="apartment" data-beds="2" data-budget="lower">
-                        <div class="property-photo photo-one" role="img" aria-label="Apartment at Maple Heights">
-                            <span class="property-tag">Apartment</span>
-                            <label class="save-property"><input type="checkbox" aria-label="Save Maple Heights"><span aria-hidden="true">♥</span></label>
-                            <span class="available">Ready to move</span>
+
+                    <div class="card-body">
+                        <div class="card-heading">
+                            <span class="property-type">Apartment</span>
+                            <span class="availability">Available now</span>
                         </div>
-                        <div class="card-body">
-                            <p class="price">₹24,000 <span>/ month</span></p>
-                            <h2>Maple Heights</h2>
-                            <p class="address">Sector 67, Mohali</p>
-                            <div class="features"><span>2 beds</span><span>2 baths</span><span>1,240 sq ft</span></div>
-                            <div class="card-bottom"><span>Fully furnished</span><a href="#details-1">View property ↗</a></div>
+
+                        <h2>The Olive Residence</h2>
+                        <p class="location">Zirakpur, Chandigarh</p>
+                        <p class="price">₹32,000 <span>/ month</span></p>
+
+                        <div class="features">
+                            <span>3 beds</span>
+                            <span>2 baths</span>
+                            <span>1,680 sq ft</span>
                         </div>
-                    </article>
-                    <article class="property-card" id="property-2" data-category="apartment" data-beds="3" data-budget="upper">
-                        <div class="property-photo photo-two" role="img" aria-label="Apartment at The Olive Residence">
-                            <span class="property-tag">Apartment</span>
-                            <label class="save-property"><input type="checkbox" aria-label="Save The Olive Residence"><span aria-hidden="true">♥</span></label>
-                            <span class="available">Ready to move</span>
+
+                        <details class="property-details">
+                            <summary>Property details</summary>
+                            <p>A spacious three-bedroom apartment with a separate dining area, wide windows and a private balcony.</p>
+                            <p>Dining area · Balcony · Lift</p>
+                        </details>
+
+                        <a href="signin.html" class="contact-button">Sign in to enquire</a>
+                    </div>
+                </article>
+
+                <article class="property-card villa">
+                    <fieldset class="gallery">
+                        <legend class="visually-hidden">Photos of Cedar Grove Villa</legend>
+
+                        <input class="photo-1 hidden-input" type="radio" name="cedar-photos" id="cedar-1" aria-label="Cedar Grove Villa: photo 1 of 3" checked>
+                        <input class="photo-2 hidden-input" type="radio" name="cedar-photos" id="cedar-2" aria-label="Cedar Grove Villa: photo 2 of 3">
+                        <input class="photo-3 hidden-input" type="radio" name="cedar-photos" id="cedar-3" aria-label="Cedar Grove Villa: photo 3 of 3">
+
+                        <div class="slides">
+                            <div class="slide slide-1">
+                                <img src="images/cedar-exterior.png" alt="Exterior of Cedar Grove Villa" width="1200" height="900">
+                                <span class="photo-caption">Exterior · 1 / 3</span>
+                                <label class="photo-arrow previous" for="cedar-3" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="cedar-2" aria-label="Next photo">›</label>
+                            </div>
+
+                            <div class="slide slide-2">
+                                <img src="images/cedar-living.png" alt="Living space of Cedar Grove Villa" width="1200" height="900" loading="lazy">
+                                <span class="photo-caption">Living space · 2 / 3</span>
+                                <label class="photo-arrow previous" for="cedar-1" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="cedar-3" aria-label="Next photo">›</label>
+                            </div>
+
+                            <div class="slide slide-3">
+                                <img src="images/cedar-bedroom.png" alt="Bedroom of Cedar Grove Villa" width="1200" height="900" loading="lazy">
+                                <span class="photo-caption">Bedroom · 3 / 3</span>
+                                <label class="photo-arrow previous" for="cedar-2" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="cedar-1" aria-label="Next photo">›</label>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p class="price">₹32,000 <span>/ month</span></p>
-                            <h2>The Olive Residence</h2>
-                            <p class="address">Zirakpur, Chandigarh</p>
-                            <div class="features"><span>3 beds</span><span>2 baths</span><span>1,680 sq ft</span></div>
-                            <div class="card-bottom"><span>Fully furnished</span><a href="#details-2">View property ↗</a></div>
+
+                        <div class="photo-dots">
+                            <label for="cedar-1" class="dot-1" aria-label="Show photo 1"></label>
+                            <label for="cedar-2" class="dot-2" aria-label="Show photo 2"></label>
+                            <label for="cedar-3" class="dot-3" aria-label="Show photo 3"></label>
                         </div>
-                    </article>
-                    <article class="property-card" id="property-3" data-category="villa" data-beds="4" data-budget="upper">
-                        <div class="property-photo photo-three" role="img" aria-label="Villa at Cedar Grove Villa">
-                            <span class="property-tag">Villa</span>
-                            <label class="save-property"><input type="checkbox" aria-label="Save Cedar Grove Villa"><span aria-hidden="true">♥</span></label>
-                            <span class="available">Ready to move</span>
+                    </fieldset>
+
+                    <div class="card-body">
+                        <div class="card-heading">
+                            <span class="property-type">Villa</span>
+                            <span class="availability">Available now</span>
                         </div>
-                        <div class="card-body">
-                            <p class="price">₹65,000 <span>/ month</span></p>
-                            <h2>Cedar Grove Villa</h2>
-                            <p class="address">New Chandigarh</p>
-                            <div class="features"><span>4 beds</span><span>4 baths</span><span>2,850 sq ft</span></div>
-                            <div class="card-bottom"><span>Fully furnished</span><a href="#details-3">View property ↗</a></div>
+
+                        <h2>Cedar Grove Villa</h2>
+                        <p class="location">New Chandigarh</p>
+                        <p class="price">₹65,000 <span>/ month</span></p>
+
+                        <div class="features">
+                            <span>4 beds</span>
+                            <span>4 baths</span>
+                            <span>2,850 sq ft</span>
                         </div>
-                    </article>
-                    <article class="property-card" id="property-4" data-category="studio" data-beds="1" data-budget="lower">
-                        <div class="property-photo photo-four" role="img" aria-label="Studio at The Urban Studio">
-                            <span class="property-tag">Studio</span>
-                            <label class="save-property"><input type="checkbox" aria-label="Save The Urban Studio"><span aria-hidden="true">♥</span></label>
-                            <span class="available">Ready to move</span>
+
+                        <details class="property-details">
+                            <summary>Property details</summary>
+                            <p>An independent family home with a private garden, four bedrooms and space for two cars.</p>
+                            <p>Private garden · Two-car parking · Balcony</p>
+                        </details>
+
+                        <a href="signin.html" class="contact-button">Sign in to enquire</a>
+                    </div>
+                </article>
+
+                <article class="property-card studio">
+                    <fieldset class="gallery">
+                        <legend class="visually-hidden">Photos of The Urban Studio</legend>
+
+                        <input class="photo-1 hidden-input" type="radio" name="urban-photos" id="urban-1" aria-label="The Urban Studio: photo 1 of 3" checked>
+                        <input class="photo-2 hidden-input" type="radio" name="urban-photos" id="urban-2" aria-label="The Urban Studio: photo 2 of 3">
+                        <input class="photo-3 hidden-input" type="radio" name="urban-photos" id="urban-3" aria-label="The Urban Studio: photo 3 of 3">
+
+                        <div class="slides">
+                            <div class="slide slide-1">
+                                <img src="images/urban-exterior.png" alt="Exterior of The Urban Studio" width="1200" height="900">
+                                <span class="photo-caption">Exterior · 1 / 3</span>
+                                <label class="photo-arrow previous" for="urban-3" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="urban-2" aria-label="Next photo">›</label>
+                            </div>
+
+                            <div class="slide slide-2">
+                                <img src="images/urban-living.png" alt="Living space of The Urban Studio" width="1200" height="900" loading="lazy">
+                                <span class="photo-caption">Living space · 2 / 3</span>
+                                <label class="photo-arrow previous" for="urban-1" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="urban-3" aria-label="Next photo">›</label>
+                            </div>
+
+                            <div class="slide slide-3">
+                                <img src="images/urban-bedroom.png" alt="Bedroom of The Urban Studio" width="1200" height="900" loading="lazy">
+                                <span class="photo-caption">Bedroom · 3 / 3</span>
+                                <label class="photo-arrow previous" for="urban-2" aria-label="Previous photo">‹</label>
+                                <label class="photo-arrow next" for="urban-1" aria-label="Next photo">›</label>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p class="price">₹16,000 <span>/ month</span></p>
-                            <h2>The Urban Studio</h2>
-                            <p class="address">Sector 35, Chandigarh</p>
-                            <div class="features"><span>1 beds</span><span>1 baths</span><span>620 sq ft</span></div>
-                            <div class="card-bottom"><span>Fully furnished</span><a href="#details-4">View property ↗</a></div>
+
+                        <div class="photo-dots">
+                            <label for="urban-1" class="dot-1" aria-label="Show photo 1"></label>
+                            <label for="urban-2" class="dot-2" aria-label="Show photo 2"></label>
+                            <label for="urban-3" class="dot-3" aria-label="Show photo 3"></label>
                         </div>
-                    </article>
-                </div>
-                <div class="empty-state"><h2>No homes match these filters.</h2><p>Try another property type, budget or bedroom count.</p><button type="reset" form="filters" class="reset-button">Reset filters</button></div>
-                <p class="results-footer">A place for every next chapter.</p>
-            </section>
-            <aside class="map-panel" aria-label="Neighborhood overview">
-                <div class="map-heading"><span class="green-dot"></span> Explore the neighbourhood <span class="map-caption">Illustrative overview</span></div>
-                <div class="neighbourhood-map">
-                    <div class="park park-one"></div><div class="park park-two"></div><div class="park park-three"></div><div class="lake"></div>
-                    <span class="map-label label-one">CHANDIGARH</span><span class="map-label label-two">MOHALI</span><span class="map-label label-three">ZIRAKPUR</span>
-                    <a href="#property-1" class="map-pin pin-one">₹24,000</a>
-                    <a href="#property-2" class="map-pin pin-two">₹32,000</a>
-                    <a href="#property-3" class="map-pin pin-three">₹65,000</a>
-                    <a href="#property-4" class="map-pin pin-four">₹16,000</a>
-                    <div class="map-preview"><div class="preview-photo photo-one"></div><strong>Find your corner of the city.</strong><span>Explore homes around Chandigarh</span></div>
-                </div>
-            </aside>
-        </div>
+                    </fieldset>
+
+                    <div class="card-body">
+                        <div class="card-heading">
+                            <span class="property-type">Studio</span>
+                            <span class="availability">Available now</span>
+                        </div>
+
+                        <h2>The Urban Studio</h2>
+                        <p class="location">Sector 35, Chandigarh</p>
+                        <p class="price">₹16,000 <span>/ month</span></p>
+
+                        <div class="features">
+                            <span>1 bed</span>
+                            <span>1 bath</span>
+                            <span>620 sq ft</span>
+                        </div>
+
+                        <details class="property-details">
+                            <summary>Property details</summary>
+                            <p>A compact furnished studio with a kitchenette, sleeping area and space to work from home.</p>
+                            <p>Kitchenette · Furnished · Work desk</p>
+                        </details>
+
+                        <a href="signin.html" class="contact-button">Sign in to enquire</a>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-        <section class="property-modal" id="details-1" role="dialog" aria-modal="true" aria-labelledby="detail-title-1">
-            <a href="#results" class="modal-backdrop" aria-label="Close property details"></a>
-            <div class="modal-content">
-                <a href="#results" class="close-modal" aria-label="Close">×</a>
-                <div class="detail-photo photo-one" role="img" aria-label="Apartment at Maple Heights"></div>
-                <div class="detail-copy"><p class="eyebrow">Apartment · Rent</p><h2 id="detail-title-1">Maple Heights</h2><p>Sector 67, Mohali</p>
-                <p class="price">₹24,000 <span>/ month</span></p><div class="features"><span>2 bedrooms</span><span>2 bathrooms</span><span>1,240 sq ft</span></div>
-                <p>A thoughtfully planned home with bright living spaces, contemporary finishes and convenient access to everyday essentials.</p>
-                <div class="amenities"><span>Parking</span><span>Security</span><span>Balcony</span></div>
-                <a href="signin.html" class="primary-button">Sign in to enquire</a></div>
-            </div>
-        </section>
-        <section class="property-modal" id="details-2" role="dialog" aria-modal="true" aria-labelledby="detail-title-2">
-            <a href="#results" class="modal-backdrop" aria-label="Close property details"></a>
-            <div class="modal-content">
-                <a href="#results" class="close-modal" aria-label="Close">×</a>
-                <div class="detail-photo photo-two" role="img" aria-label="Apartment at The Olive Residence"></div>
-                <div class="detail-copy"><p class="eyebrow">Apartment · Rent</p><h2 id="detail-title-2">The Olive Residence</h2><p>Zirakpur, Chandigarh</p>
-                <p class="price">₹32,000 <span>/ month</span></p><div class="features"><span>3 bedrooms</span><span>2 bathrooms</span><span>1,680 sq ft</span></div>
-                <p>A thoughtfully planned home with bright living spaces, contemporary finishes and convenient access to everyday essentials.</p>
-                <div class="amenities"><span>Parking</span><span>Security</span><span>Balcony</span></div>
-                <a href="signin.html" class="primary-button">Sign in to enquire</a></div>
-            </div>
-        </section>
-        <section class="property-modal" id="details-3" role="dialog" aria-modal="true" aria-labelledby="detail-title-3">
-            <a href="#results" class="modal-backdrop" aria-label="Close property details"></a>
-            <div class="modal-content">
-                <a href="#results" class="close-modal" aria-label="Close">×</a>
-                <div class="detail-photo photo-three" role="img" aria-label="Villa at Cedar Grove Villa"></div>
-                <div class="detail-copy"><p class="eyebrow">Villa · Rent</p><h2 id="detail-title-3">Cedar Grove Villa</h2><p>New Chandigarh</p>
-                <p class="price">₹65,000 <span>/ month</span></p><div class="features"><span>4 bedrooms</span><span>4 bathrooms</span><span>2,850 sq ft</span></div>
-                <p>A thoughtfully planned home with bright living spaces, contemporary finishes and convenient access to everyday essentials.</p>
-                <div class="amenities"><span>Parking</span><span>Security</span><span>Balcony</span></div>
-                <a href="signin.html" class="primary-button">Sign in to enquire</a></div>
-            </div>
-        </section>
-        <section class="property-modal" id="details-4" role="dialog" aria-modal="true" aria-labelledby="detail-title-4">
-            <a href="#results" class="modal-backdrop" aria-label="Close property details"></a>
-            <div class="modal-content">
-                <a href="#results" class="close-modal" aria-label="Close">×</a>
-                <div class="detail-photo photo-four" role="img" aria-label="Studio at The Urban Studio"></div>
-                <div class="detail-copy"><p class="eyebrow">Studio · Rent</p><h2 id="detail-title-4">The Urban Studio</h2><p>Sector 35, Chandigarh</p>
-                <p class="price">₹16,000 <span>/ month</span></p><div class="features"><span>1 bedrooms</span><span>1 bathrooms</span><span>620 sq ft</span></div>
-                <p>A thoughtfully planned home with bright living spaces, contemporary finishes and convenient access to everyday essentials.</p>
-                <div class="amenities"><span>Parking</span><span>Security</span><span>Balcony</span></div>
-                <a href="signin.html" class="primary-button">Sign in to enquire</a></div>
-            </div>
-        </section>
+
+    <footer class="page-footer">
+        <a href="index.html">Estoria</a>
+        <p>Find a place to call home.</p>
+    </footer>
 </body>
 </html>
